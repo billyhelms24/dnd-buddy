@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <!-- test -->
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-
-        <link rel="stylesheet" href="./css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DnD Buddy</title>
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body onload="displayClassDescription()">
-        <form action="">
-            <label for="classes">Choose a class:</label>
-            <select
-                name="classes"
-                id="classSelect"
-                onchange="displayClassDescription()"
-            ></select>
-            <button id="classSelectBtn">Select</button>
-        </form>
-        <p id="classDescription"></p>
+        <div class="field">
+            <label for="classes" class="label">Choose a class:</label>
+            <div class="control">
+                <div class="select">
+                    <select
+                        name="classes"
+                        id="classSelect"
+                        onchange="displayClassDescription()"
+                    ></select>
+                </div>
+                <button class="button is-primary">Select</button>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <textarea
+                    class="textarea"
+                    id="classDescription"
+                    rows="15"
+                    readonly
+                ></textarea>
+            </div>
+        </div>
 
-        <!-- JavaScript -->
-        <script src="./js/script.js"></script>
+        <script type="text/javascript" src="lib/main.js"></script>
     </body>
 </html>
