@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {});
 let request = new XMLHttpRequest();
 
 // a static list of all official DnD classes
-const class_list = [
+const CLASS_LIST = [
     "artificer",
     "barbarian",
     "bard",
@@ -22,8 +22,8 @@ const class_list = [
 let classData = [];
 
 // a loop to load class objects from each class JSON
-for (let i = 0; i < class_list.length; i++) {
-    request.open("GET", `././data/classes/class-${class_list[i]}.json`, false);
+for (let i = 0; i < CLASS_LIST.length; i++) {
+    request.open("GET", `././data/classes/class-${CLASS_LIST[i]}.json`, false);
     request.send(null);
     classData.push(JSON.parse(request.responseText));
 }
